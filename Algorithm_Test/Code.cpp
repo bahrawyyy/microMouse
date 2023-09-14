@@ -371,6 +371,11 @@ void floodFillUsingQueue(int start_x, int start_y, int previous_x, int previous_
     int north_X, north_Y, east_X, east_Y, south_X, south_Y, west_X, west_Y;
 
     std::queue<int> cellQueue;
+
+    if(!isIncrementConsistent(start_x, start_y))
+      floodArray[start_x][start_y] = floodArray[start_x][start_y] + 1;
+
+
     cellQueue.push(start_x);
     cellQueue.push(start_y);
 
@@ -447,11 +452,11 @@ char whereToMove(int current_x, int current_y, int previous_x, int previous_y, i
     getSurroungings(current_x, current_y, &north_X, &north_Y, &east_X, &east_Y, &south_X, &south_Y, &west_X, &west_Y);
 
     int minValue = 1000; // Initialize with a high value
-    int minCell = -1;       // Initialize to an invalid value
+    int minCell = 1000;       // Initialize to an invalid value
     int previous = -1;
     int AccessiblePathsNum = 0;
 
-    int accessibleNeighbors[4] = {-1, -1, -1, -1}; // Initialize to invalid values
+    int accessibleNeighbors[4] = {1000, 1000, 1000, 1000}; // Initialize to invalid values
 
 
     if ((south_X == previous_x) && (south_Y == previous_y))
@@ -496,12 +501,6 @@ char whereToMove(int current_x, int current_y, int previous_x, int previous_y, i
         {
             AccessiblePathsNum++;
             accessibleNeighbors[i] = floodArray[*currentNeighborX][*currentNeighborY];
-
-            // if (orient == i || (orient == (i + 2) % 4))
-            // {
-            //     // If the direction aligns with current orientation or is opposite, return 'F'
-            //     return 'F';
-            // }
         }
     }
 
@@ -513,15 +512,9 @@ char whereToMove(int current_x, int current_y, int previous_x, int previous_y, i
     // Find the minimum value among accessible neighbors
     for (int i = 0; i < 4; i++)
     {
-        // if (accessibleNeighbors[i] != -1 && accessibleNeighbors[i] < minValue)
-        // {
-        //     minValue = accessibleNeighbors[i];
-        //     minCell = i;
-        // }
 
 
-
-        if (accessibleNeighbors[i] != -1 && accessibleNeighbors[i] < minValue)
+        if (accessibleNeighbors[i] != 1000 && accessibleNeighbors[i] < minValue)
         {
           if (AccessiblePathsNum == 1){
             minValue = accessibleNeighbors[i];
@@ -531,15 +524,11 @@ char whereToMove(int current_x, int current_y, int previous_x, int previous_y, i
               continue;
             }else{
               minValue = accessibleNeighbors[i];
-              minCell = i;    
+              minCell = i;   
             }
           }
         }
 
-        // if (minCell != -1 && minCell != previous)
-        // {
-        //     return (minCell == orient) ? 'F' : (minCell == (orient + 1) % 4) ? 'R' : (minCell == (orient + 3) % 4) ? 'L' : 'B';
-        // }
     }
 
 
@@ -553,8 +542,6 @@ char whereToMove(int current_x, int current_y, int previous_x, int previous_y, i
   else
     return 'B';
 
-    // If there are no accessible neighbors or no better direction found, return 'B'
-    // return 'B';
 }
 
 
