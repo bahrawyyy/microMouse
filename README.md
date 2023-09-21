@@ -67,6 +67,8 @@ This Micromouse Robot project was developed by a dedicated team of individuals p
 
 - [**Mohamed Aref**](https://github.com/MuhammedAreff)
 
+- [**Abdalla Elbahrawy**](https://github.com/bahrawyyy)
+
 Each team member contributed their unique skills and expertise to make this project a reality. Feel free to explore their GitHub profiles to learn more about their work and interests.
 
 
