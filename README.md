@@ -48,7 +48,7 @@ Before you begin, make sure you have the following prerequisites in place:
 
 1- Clone or download the hardware integration version of the Micromouse project from the repository.
 
-2- Follow the hardware setup instructions provided in the project documentation to connect sensors, motors, and other hardware components to your microcontroller.
+2- Follow the hardware setup instructions provided in [Project documentation](https://github.com/bahrawyyy/microMouse/blob/main/Algorithm%20Integration/hardware_setup.md) to connect sensors, motors, and other hardware components to your microcontroller.
 
 3- Build and upload the project code to your microcontroller using the appropriate development environment (e.g., Arduino IDE, Raspberry Pi development tools).
 
