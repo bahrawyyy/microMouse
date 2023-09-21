@@ -42,7 +42,7 @@ Before you begin, make sure you have the following prerequisites in place:
 
    ```shell
    g++ Code.cpp API.cpp -o micromouse_simulator
-3. Follow the instuctions [here](https://github.com/micromouseonline/micromouse-simulator).
+3. Follow the instuctions [here](https://github.com/mackorone/mms).
 
 ### Hardware Integration Version
 
