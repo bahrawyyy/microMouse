@@ -41,7 +41,7 @@ Before you begin, make sure you have the following prerequisites in place:
 2. Build the project using your C++ compiler. Typically, you can use the following command:
 
    ```shell
-   g++ -o micromouse_simulator micromouse_simulator.cpp
+   g++ -o Code.cpp API.cpp -o micromouse_simulator
 3. Follow the instuctions [here](https://github.com/micromouseonline/micromouse-simulator).
 
 ### Hardware Integration Version
