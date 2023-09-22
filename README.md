@@ -24,7 +24,7 @@ Before you begin, make sure you have the following prerequisites in place:
 ### For the Simulation Version:
 
 - **C++ Compiler:** You need a C++ compiler installed on your system.
-- **MMS Simulator:** Download and install the Micromouse Simulator (MMS) for your platform. You can find the MMS repository and installation instructions [here](https://github.com/micromouseonline/micromouse-simulator).
+- **MMS Simulator:** Download and install the Micromouse Simulator (MMS) for your platform. You can find the MMS repository and installation instructions [here](https://github.com/mackorone/mms).
 
 ### For the Hardware Integration Version:
 
